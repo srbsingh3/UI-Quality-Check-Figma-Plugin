@@ -1,0 +1,10 @@
+{
+  "name": "UI Quality Check",
+  "id": "1028076562534692010",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": [
+    "figma"
+  ],
+  "ui": "ui.html"
+}
