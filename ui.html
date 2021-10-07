@@ -1,17 +1,44 @@
-<h2>Rectangle Creator</h2>
-<p>Count: <input id="count" value="5"></p>
-<button id="create">Create</button>
-<button id="cancel">Cancel</button>
-<script>
+<!DOCTYPE html>
+<html lang="en">
 
-document.getElementById('create').onclick = () => {
-  const textbox = document.getElementById('count');
-  const count = parseInt(textbox.value, 10);
-  parent.postMessage({ pluginMessage: { type: 'create-rectangles', count } }, '*')
-}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=2.0">
 
-document.getElementById('cancel').onclick = () => {
-  parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
-}
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-</script>
+  <style>
+    * {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 27px;
+      color: #1C5ECE;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>ARMOR DESIGN SYSTEM</h3>
+  <h1>UI Quality Check</h1>
+  <p>Let’s use this list to better adopt Armor components, avoid repetitive work and to achieve a more smooth handover
+    experience for everyone.</p>
+
+  <h2>1- Onboarding ⛴</h2>
+
+  <input type="checkbox" id="onboarding"><label for="onboarding">I completed the <a
+      href="https://www.figma.com/proto/CqreT4PwxyuDVPMmcJQYx7/Armor-onboarding?page-id=11%3A1&node-id=160%3A36555&viewport=45%2C462%2C0.061435867100954056&scaling=contain">Armor
+      Onboarding</a> steps.</label>
+  <br><br>
+  <input type="checkbox" id="fonts"><label for="fonts">I installed <a
+      href="https://fonts.google.com/specimen/Roboto">Roboto</a> and <a
+      href="https://fonts.google.com/specimen/Roboto+Slab">Roboto Slab</a> fonts to the system</label>
+  <br><br>
+  <input type="checkbox" id="plugins"><label for="plugins">I installed the plugins</label>
+</body>
+
+</html>
