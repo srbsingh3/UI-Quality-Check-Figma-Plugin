@@ -6,41 +6,145 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=2.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      font-family: 'Poppins', sans-serif;
+    :root {
+      --primary: #161616;
+      --secondary: #6B6B6B;
+      --accent: #1C5ECE;
+      --border: rgba(0, 0, 0, 0.08);
     }
 
-    h3 {
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 27px;
-      color: #1C5ECE;
+    * {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      color: var(--primary);
+      padding: 0;
+      margin: 0;
     }
 
     body {
       display: flex;
-      padding-top: 90px;
+      padding: 96px 80px;
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 27px;
+      letter-spacing: 0.15px;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 56px;
+      font-weight: 600;
+      line-height: 70px;
+      margin-bottom: 24px;
+    }
+
+    h4 {
+      font-weight: 400;
+      font-size: 24px;
+      color: var(--secondary);
+      line-height: 36px;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 48px;
+      margin-bottom: 36px;
+    }
+
+    p {
+      font-weight: 400;
+      color: var(--secondary);
+      font-size: 16px;
+      line-height: 24px;
+      margin-left: 44px;
+      margin-top: 8px;
+    }
+
+    .header-box {
+      display: flex;
+      margin-bottom: 64px;
+    }
+
+    .right-header {
+      margin-left: 66px;
+    }
+
+    .border {
+      height: 1px;
+      background-color: var(--border);
+      margin-left: 44px;
+      margin-top: 32px;
+      margin-bottom: 24px;
+    }
+
+    #main-label {
+      margin-left: 24px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 32px;
+      cursor: pointer;
+    }
+
+    #link-big {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 32px;
+      color: var(--accent);
+    }
+
+    /* Custom Checkbox CSS */
+    /* Hide the browser's default checkbox */
+    #main-label input {
+      opacity: 0;
+      /* cursor: pointer; */
+      height: 0;
+      width: 0;
     }
   </style>
 </head>
 
 <body>
-  <div class="main">
-    <h3>ARMOR DESIGN SYSTEM</h3>
-    <h1>UI Quality Check</h1>
-    <p>Let’s use this list to better adopt Armor components, avoid repetitive work and to achieve a more smooth handover
-      experience for everyone.</p>
+  <div class="main-box">
+    <div class="header-box">
+      <div class="left-header">
+        <h3>ARMOR DESIGN SYSTEM</h3>
+        <h1>UI Quality Check</h1>
+        <h4>Let’s use this list to better adopt Armor components, avoid repetitive work and to achieve a more smooth
+          handover
+          experience for everyone.</h4>
+      </div>
+      <div class="right-header">
+        <svg width="107" height="127" viewBox="0 0 107 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M87.5757 38.2656L53.2799 21.9375L18.9841 38.2656C18.7857 49.8061 19.7798 58.7123 21.9663 64.9844C30.3357 88.9918 48.8065 108.031 53.2799 108.031C57.7533 108.031 75.4487 93.3439 84.5935 64.9844C86.3044 59.6786 87.2985 50.7723 87.5757 38.2656Z"
+            fill="#92BAF6" />
+          <path
+            d="M89.6864 34.1984C68.259 34.1984 53.1092 16 53.1092 16C53.1092 16 37.9594 34.1984 16.532 34.1984C16.532 34.1984 8.70356 86.0328 53.1092 111C97.5148 86.0328 89.6864 34.1984 89.6864 34.1984ZM82.1413 62.4016C77.9662 80.6891 68.1993 94.6422 53.1092 104.083C38.019 94.6422 28.2522 80.6891 24.077 62.3422C22.4161 54.9465 21.7343 47.3663 22.0491 39.7945C36.2297 38.0281 47.264 29.8195 53.1092 24.4758C58.9544 29.8195 69.9887 38.0281 84.1693 39.7945C84.484 47.3663 83.8023 54.9465 82.1413 62.3422V62.4016Z"
+            fill="#0042A5" />
+        </svg>
+      </div>
+    </div>
 
     <h2>1- Onboarding ⛴</h2>
 
-    <input type="checkbox" id="onboarding"><label for="onboarding">I completed the <a
+    <input type="checkbox" id="onboarding"><label for="onboarding" id="main-label">I completed the <a
         href="https://www.figma.com/proto/CqreT4PwxyuDVPMmcJQYx7/Armor-onboarding?page-id=11%3A1&node-id=160%3A36555&viewport=45%2C462%2C0.061435867100954056&scaling=contain"
-        target="_blank">Armor
+        target="_blank" id="link-big">Armor
         Onboarding</a> steps.</label>
+    <p class="subtext">Follow the step by step guide to complete your self onboarding to Armor Design System</p>
+
+    <div class="border"></div>
+
     <br><br>
+
     <input type="checkbox" id="fonts"><label for="fonts">I installed <a href="https://fonts.google.com/specimen/Roboto"
         target="_blank">Roboto</a> and <a href="https://fonts.google.com/specimen/Roboto+Slab" target="_blank">Roboto
         Slab</a> fonts to
