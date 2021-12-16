@@ -116,6 +116,7 @@
       appearance: none;
       border: 2px solid var(--accent);
       border-radius: 4px;
+      align-self: center;
       outline: none;
       background-color: white;
       cursor: pointer;
@@ -139,7 +140,7 @@
       color: white;
       position: absolute;
       left: 5px;
-      top: 6px;
+      top: 12px;
     }
 
     .checkbox>input:active {
@@ -183,15 +184,16 @@
 
     <div class="border"></div>
 
-    <br><br>
+    <label class="checkbox">
+      <input type="checkbox" id="onboarding">
+      <span class="main-label">I installed <a href="https://fonts.google.com/specimen/Roboto" target="_blank"
+          id="link-big">Roboto</a>
+        and <a href="https://fonts.google.com/specimen/Roboto+Slab" target="_blank" id="link-big">Roboto
+          Slab</a> fonts to
+        the system</span>
+    </label>
 
-    <input type="checkbox" id="fonts"><label for="fonts">I installed <a href="https://fonts.google.com/specimen/Roboto"
-        target="_blank">Roboto</a> and <a href="https://fonts.google.com/specimen/Roboto+Slab" target="_blank">Roboto
-        Slab</a> fonts to
-      the system</label>
-    <br><br>
-    <input type="checkbox" id="plugins"><label for="plugins">I installed the plugins</label>
-  </div>
+    <div class="border"></div>
 </body>
 
 </html>
