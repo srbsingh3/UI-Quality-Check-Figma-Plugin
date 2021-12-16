@@ -85,7 +85,7 @@
       margin-bottom: 24px;
     }
 
-    #main-label {
+    .main-label {
       margin-left: 24px;
       font-size: 20px;
       font-weight: 600;
@@ -101,12 +101,49 @@
     }
 
     /* Custom Checkbox CSS */
-    /* Hide the browser's default checkbox */
-    #main-label input {
-      opacity: 0;
-      /* cursor: pointer; */
-      height: 0;
-      width: 0;
+    .checkbox {
+      display: inline-flex;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .checkbox>input {
+      height: 20px;
+      width: 20px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -o-appearance: none;
+      appearance: none;
+      border: 2px solid var(--accent);
+      border-radius: 4px;
+      outline: none;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    .checkbox>input:checked {
+      border: 2px solid var(--accent);
+      background-color: var(--accent);
+    }
+
+    .checkbox:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    .checkbox>input:checked+span::before {
+      content: url("data:image/svg+xml; utf8, %3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.94669L4.19532 7L9 1' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      display: block;
+      text-align: center;
+      color: white;
+      position: absolute;
+      left: 5px;
+      top: 6px;
+    }
+
+    .checkbox>input:active {
+      border: 2px solid var(--accent);
     }
   </style>
 </head>
@@ -135,10 +172,13 @@
 
     <h2>1- Onboarding ⛴</h2>
 
-    <input type="checkbox" id="onboarding"><label for="onboarding" id="main-label">I completed the <a
-        href="https://www.figma.com/proto/CqreT4PwxyuDVPMmcJQYx7/Armor-onboarding?page-id=11%3A1&node-id=160%3A36555&viewport=45%2C462%2C0.061435867100954056&scaling=contain"
-        target="_blank" id="link-big">Armor
-        Onboarding</a> steps.</label>
+    <label class="checkbox">
+      <input type="checkbox" id="onboarding">
+      <span class="main-label">I completed the <a
+          href="https://www.figma.com/proto/CqreT4PwxyuDVPMmcJQYx7/Armor-onboarding?page-id=11%3A1&node-id=160%3A36555&viewport=45%2C462%2C0.061435867100954056&scaling=contain"
+          target="_blank" id="link-big">Armor
+          Onboarding</a> steps.</span>
+    </label>
     <p class="subtext">Follow the step by step guide to complete your self onboarding to Armor Design System</p>
 
     <div class="border"></div>
