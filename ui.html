@@ -59,13 +59,21 @@
       margin-bottom: 36px;
     }
 
-    p {
+    .subtext {
       font-weight: 400;
-      color: var(--secondary);
+      color: var(--primary);
       font-size: 16px;
       line-height: 24px;
       margin-left: 44px;
       margin-top: 8px;
+    }
+
+    .secondary-header {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--secondary);
+      line-height: 24px;
+      margin: 24px 0 24px 44px;
     }
 
     .header-box {
@@ -93,12 +101,19 @@
       cursor: pointer;
     }
 
-    #link-big {
+    .link-big {
       font-size: 20px;
       font-weight: 600;
       line-height: 32px;
       color: var(--accent);
     }
+
+    .link-small {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .secondary-checkbox {}
 
     /* Custom Checkbox CSS */
     .checkbox {
@@ -174,10 +189,10 @@
     <h2>1- Onboarding ⛴</h2>
 
     <label class="checkbox">
-      <input type="checkbox" id="onboarding">
+      <input type="checkbox">
       <span class="main-label">I completed the <a
           href="https://www.figma.com/proto/CqreT4PwxyuDVPMmcJQYx7/Armor-onboarding?page-id=11%3A1&node-id=160%3A36555&viewport=45%2C462%2C0.061435867100954056&scaling=contain"
-          target="_blank" id="link-big">Armor
+          target="_blank" class="link-big">Armor
           Onboarding</a> steps.</span>
     </label>
     <p class="subtext">Follow the step by step guide to complete your self onboarding to Armor Design System</p>
@@ -185,15 +200,41 @@
     <div class="border"></div>
 
     <label class="checkbox">
-      <input type="checkbox" id="onboarding">
+      <input type="checkbox">
       <span class="main-label">I installed <a href="https://fonts.google.com/specimen/Roboto" target="_blank"
-          id="link-big">Roboto</a>
-        and <a href="https://fonts.google.com/specimen/Roboto+Slab" target="_blank" id="link-big">Roboto
+          class="link-big">Roboto</a>
+        and <a href="https://fonts.google.com/specimen/Roboto+Slab" target="_blank" class="link-big">Roboto
           Slab</a> fonts to
         the system</span>
     </label>
 
     <div class="border"></div>
+
+    <label class="checkbox">
+      <input type="checkbox">
+      <span class="main-label">I installed the plugins</span>
+    </label>
+    <p class="subtext">Please check the recommended plugins listed below. You may hide or remove this whole section
+      after everything is set.</p>
+
+    <p class="secondary-header">Highly Recommended</p>
+
+    <label class="checkbox" style="margin-left: 44px;">
+      <input type="checkbox">
+      <span class="main-label" style="margin-left: 10px;"><a
+          href="https://www.figma.com/community/plugin/852192486284901337/Streamline-Icons%2C-Illustrations-and-Emoji"
+          target="_blank" class="link-big link-small">Streamline
+          Icons</a></span>
+    </label>
+
+    <label class="checkbox" style="margin-left: 44px;">
+      <input type="checkbox">
+      <span class="main-label" style="margin-left: 10px;"><a
+          href="https://www.figma.com/community/plugin/748533339900865323/Contrast" target="_blank"
+          class="link-big link-small">Contrast</a></span>
+    </label>
+
+
 </body>
 
 </html>
